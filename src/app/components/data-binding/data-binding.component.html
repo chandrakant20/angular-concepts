@@ -1,0 +1,19 @@
+<div style="text-align: center;">
+  <h2>Data Binding</h2>
+  <hr>
+  <h3 style="color: brown;"> 👉 String Interpolation</h3>
+
+  <!-- this is string interploation where '{{}}'' is used -->
+  <p> 👇 Interpolation with variable </p>
+  <h4>Server with {{serverId}} is {{serverStatus}}</h4>
+
+  <!-- you can call method in string interpolation -->
+  <p> 👇 Interpolation with Function </p>
+  <h4>Server with {{serverId}} is {{getServerStatus() }}</h4>
+  <br>
+  <h3 style="color: brown;"> 👉 Property Binding</h3>
+  <p> 👇 Here we are using disabled Property of a button to disable and enable the button.
+    It will disable afer 2 seconds.... </p>
+  <p>It can be reversed by adding ! symbol to enableButton proprty like !enableButton</p>
+  <button [disabled]="enableButton">Enable/Disable</button>
+</div>

@@ -1,0 +1,27 @@
+<div style="text-align: center;">
+
+  <h2>Directives</h2>
+  <p style="color:forestgreen;"> Directives are instructions in DOM !</p>
+  <hr>
+  <h3 style="color: brown;"> 👉 ngIf to output the data conditionally</h3>
+  <p> 👇 Here we are making the showthecontent to true to show the data inside p tag on click of button </p>
+  <button (click)="showData()">Show the data</button>
+  <p *ngIf="showtheconteent">🖖This is data, which will show on condition.🖖</p>
+  <br> <br>
+
+  <h3 style="color: brown;"> 👉 ngIf with else condition</h3>
+  <p> 🧠 You need to use ng-template to use else part of ngIf directive </p>
+  <button (click)="makeTrue()">Make True</button>
+  <p *ngIf="showcontent; else noContent">This is content will show on ngIf is true.</p>
+  <ng-template #noContent>
+    <p>This is content where the ngIf is false</p>
+  </ng-template>
+  <br>
+  <h3 style="color: brown;"> 👉 ngStyle Directive</h3>
+  <p> 👇Here we are using ngStyle to set teh background color </p>
+  <p [ngStyle]="{backgroundColor: getColor()}">The server is {{serverStatus}}</p>
+
+  <h3 style="color: brown;"> 👉 Applying the CSS Classes Dynamically using ngClass</h3>
+  <p> 👇Here we are using ngStyle to set teh background color </p>
+  <p [ngClass]="{green : serverStatus === 'online', red : serverStatus ==='offline'}">The server is {{serverStatus}}</p>
+</div>

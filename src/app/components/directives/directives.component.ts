@@ -9,6 +9,7 @@ export class DirectivesComponent implements OnInit {
   showtheconteent = false;
   showcontent = false;
   serverStatus: string;
+  cities = [' 🚗 Bangalore', ' 💨 Bhuvaneshwar', '  🌊 Vishakapatnam'];
   constructor() {
     this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
   }

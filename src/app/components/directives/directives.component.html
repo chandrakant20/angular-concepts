@@ -17,11 +17,19 @@
     <p>This is content where the ngIf is false</p>
   </ng-template>
   <br>
+
   <h3 style="color: brown;"> 👉 ngStyle Directive</h3>
   <p> 👇Here we are using ngStyle to set teh background color </p>
   <p [ngStyle]="{backgroundColor: getColor()}">The server is {{serverStatus}}</p>
 
   <h3 style="color: brown;"> 👉 Applying the CSS Classes Dynamically using ngClass</h3>
-  <p> 👇Here we are using ngStyle to set teh background color </p>
+  <p> 👇Here we are using ngStyle to set the color of the text</p>
   <p [ngClass]="{green : serverStatus === 'online', red : serverStatus ==='offline'}">The server is {{serverStatus}}</p>
+  <br>
+
+  <h3 style="color: brown;"> 👉 ngFor Directive</h3>
+  <p> 👇Here we are using ngFor directive to display the data from the array</p>
+  <ol>
+    <li *ngFor="let city of cities">{{city}}</li>
+  </ol>
 </div>

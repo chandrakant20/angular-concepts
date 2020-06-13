@@ -11,9 +11,34 @@
   <p> 👇 Interpolation with Function </p>
   <h4>Server with {{serverId}} is {{getServerStatus() }}</h4>
   <br>
+
   <h3 style="color: brown;"> 👉 Property Binding</h3>
   <p> 👇 Here we are using disabled Property of a button to disable and enable the button.
     It will disable afer 2 seconds.... </p>
   <p>It can be reversed by adding ! symbol to enableButton proprty like !enableButton</p>
   <button [disabled]="enableButton">Enable/Disable</button>
+  <br> <br>
+
+  <h3 style="color: brown;"> 👉 Event Binding</h3>
+  <p>👇 Here we are using onClick event of a button to check the Status</p>
+  <button (click)="onClick()">Status</button>
+  <p>{{buttonStatus}}</p>
+  <br>
+
+  <h3 style="color: brown;"> 👉 Passing and Using Data With evnt Binding</h3>
+  <p>👇 Here we are using input event of input text box to update the variable Simultaneity</p>
+  <label>Your Input : </label>
+  <input type="text" (input)="onInputKeyUp($event)">
+  <p>Your Input value ✍️ : {{inputTextValue}}</p>
+
+  <br>
+
+  <h3 style="color: brown;"> 👉 Two Way DataBinding</h3>
+  <p>👂 Two-Way-Binding to work, you need to enable the ngModel directive. This is done by adding the FormsModule to the
+    imports[] array in the AppModule</p>
+  <p>👂 You then also need to add the import from @angular/forms in the app.module.ts file:</p>
+  <label for="">Your Input :</label>
+  <input type="text" [(ngModel)]="inputTextusingTwoWay">
+  <p>Your Input Value ✍️ : {{inputTextusingTwoWay}}</p>
+
 </div>

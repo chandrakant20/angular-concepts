@@ -9,7 +9,9 @@ export class DataBindingComponent implements OnInit {
   serverId = 10;
   serverStatus = 'Offline';
   enableButton = false;
-
+  buttonStatus = 'Not Clicked';
+  inputTextValue = '';
+  inputTextusingTwoWay = '';
   constructor() {
     // This is es6 arrow function which will execute after 2 seconds
     setTimeout(() => {
@@ -17,10 +19,22 @@ export class DataBindingComponent implements OnInit {
     }, 2000);
   }
 
+  // Interpolation with the function
   getServerStatus() {
     return this.serverStatus;
   }
+
   ngOnInit(): void {
   }
 
+  // button click event
+  onClick() {
+    this.buttonStatus = 'Clicked !';
+  }
+
+  onInputKeyUp(event: any) {
+    // either one can be used
+    this.inputTextValue = event.target.value;
+    // this.inputTextValue = (event.target as HTMLInputElement).value;
+  }
 }
